@@ -1,13 +1,169 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.lnk{
+    @apply bg-red-600 px-5 py-2 rounded-full text-white font-bold tracking-wider
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.slider-control{
+    @apply absolute top-12  w-4 flex items-center justify-center z-10 text-white cursor-pointer
 }
+
+.sidebar-item{
+  @apply mt-2 mr-2 mb-4 ml-2
+}
+.tooltip {
+    @apply invisible absolute p-1 rounded border border-gray-200 bg-black shadow-lg ml-4 text-xs;
+  }
+  
+  .has-tooltip:hover .tooltip {
+    @apply visible z-50
+  }
+  
+
+  .group:hover .group-hover\:block {
+    display:flex;
+  }
+
+.boxbottom{
+    top:17.3rem;
+    
+}
+
+.t16lpgj{
+  @apply absolute bottom-0 w-full;
+}
+
+.tran{
+    transition: top 1s ease 0s;
+}
+
+.topToBottom {
+    animation: topToBottom ease 2s;
+    -webkit-animation: topToBottom ease 2s;
+    -moz-animation: topToBottom ease 2s;
+    -o-animation: topToBottom ease 2s;
+    -ms-animation: topToBottom ease 2s;
+     top:17.3rem;
+  }
+  @keyframes topToBottom {
+    0% {
+        bottom: 0;
+    }
+    100% {
+      top: 17.3rem;
+    }
+  }
+  
+  @-moz-keyframes topToBottom {
+    0% {
+        bottom: 0;
+    }
+    100% {
+      top: 17.3rem;
+    }
+  }
+  
+  @-webkit-keyframes topToBottom {
+    0% {
+        bottom: 0;
+    }
+    100% {
+      top: 17.3rem;
+    }
+  }
+  
+  @-o-keyframes topToBottom {
+    0% {
+        bottom: 0;
+    }
+    100% {
+      top: 17.3rem;
+    }
+  }
+  
+  @-ms-keyframes topToBottom {
+    0% {
+        bottom: 0;
+    }
+    100% {
+      top: 17.3rem;
+    }
+  }
+
+
+  .loading {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+  }
+  .loading div {
+    position: absolute;
+    background: #fff;
+    opacity: 1;
+    border-radius: 50%;
+    animation: loading 1.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  .loading div:nth-child(2) {
+    animation-delay: -.7s;
+  }
+  @keyframes loading {
+    0% {
+      top: 28px;
+      left: 28px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: -1px;
+      left: -1px;
+      width: 58px;
+      height: 58px;
+      opacity: 0;
+    }
+  }
+
+
+.left{
+    @apply left-0
+}
+
+.right{
+    @apply right-0
+}
+
+
+.table {
+    border-spacing: 0 15px;
+}
+
+i {
+    font-size: 1rem !important;
+}
+
+.table tr {
+    border-radius: 20px;
+}
+
+tr td:nth-child(n+5),
+tr th:nth-child(n+5) {
+    border-radius: 0 .625rem .625rem 0;
+}
+
+tr td:nth-child(1),
+tr th:nth-child(1) {
+    border-radius: .625rem 0 0 .625rem;
+}
+
+.item{
+   border-top: 1px solid #ccc; 
+   border-left: 3px solid blue;
+   border-right: 1px solid #ccc;
+   border-bottom: 1px solid #ccc;
+}
+
